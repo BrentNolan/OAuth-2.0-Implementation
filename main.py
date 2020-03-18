@@ -27,7 +27,7 @@ class SignIn(webapp2.RequestHandler):
         url = 'https://accounts.google.com/o/oauth2/v2/auth'
         stateg = state_gen()
         values = {'response_type': 'code',
-                  'client_id': '238284068035-o7o6g5soe65cuqkfqcahlij5d4hu65or.apps.googleusercontent.com',
+                  'client_id': '<ID Here>.apps.googleusercontent.com',
                   'redirect_uri': 'https://oauth2-nolanbr.appspot.com/oauth',
                   'scope': 'email',
                   'state': stateg,
@@ -47,8 +47,8 @@ class OAuth(webapp2.RequestHandler):
         url = "https://www.googleapis.com/oauth2/v4/token/"
         data_to_post = {
             'code': authcode,
-            'client_id': '238284068035-o7o6g5soe65cuqkfqcahlij5d4hu65or.apps.googleusercontent.com',
-            'client_secret': 'VYJn-UiST3wLYxrYHlimCcRT',
+            'client_id': ',<ID here>.apps.googleusercontent.com',
+            'client_secret': '<Secret Here>',
             'redirect_uri': 'https://oauth2-nolanbr.appspot.com/oauth',
             'grant_type': 'authorization_code'
         }
